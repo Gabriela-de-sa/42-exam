@@ -6,7 +6,7 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/05 18:49:35 by gabriela          #+#    #+#             */
-/*   Updated: 2023/12/05 21:04:55 by gabriela         ###   ########.fr       */
+/*   Updated: 2023/12/07 19:09:17 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,12 +93,12 @@ void	rot_13(char *argv)
 	i = 0;
 	while (argv[i])
 	{
-		if (argv[i] >= 32 && argv[i] <= 64 || argv[i] >= 91 && argv[i] <= 96)
-			ft_putchar(argv[i]);
 		if (argv[i] >= 'a' && argv[i] <= 'z')
 			lower_letter(argv[i]);
-		if (argv[i] >= 'A' && argv[i] <= 'Z')
+		else if (argv[i] >= 'A' && argv[i] <= 'Z')
 			upper_letter(argv[i]);
+		else
+			ft_putchar(argv[i]);
 		i++;
 	}
 }

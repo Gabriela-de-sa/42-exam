@@ -6,9 +6,20 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:35:32 by gabriela          #+#    #+#             */
-/*   Updated: 2023/11/15 14:29:27 by gabriela         ###   ########.fr       */
+/*   Updated: 2023/12/07 18:49:31 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Write a program that takes a string and displays its first word, followed by a
+newline.
+
+A word is a section of string delimited by spaces/tabs or by the start/end of
+the string.
+
+If the number of parameters is not 1, or if there are no words, simply display
+a newline.
+*/
 
 #include <unistd.h>
 
