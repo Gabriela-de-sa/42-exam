@@ -6,13 +6,12 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/11 18:48:33 by gabriela          #+#    #+#             */
-/*   Updated: 2023/12/11 22:08:12 by gabriela         ###   ########.fr       */
+/*   Updated: 2023/12/11 22:10:15 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
-#include <stdio.h>
 
 void	ft_putchar(char c)
 {
