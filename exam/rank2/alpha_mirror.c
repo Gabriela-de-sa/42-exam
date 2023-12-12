@@ -6,9 +6,24 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 19:50:54 by gabriela          #+#    #+#             */
-/*   Updated: 2023/12/07 20:20:48 by gabriela         ###   ########.fr       */
+/*   Updated: 2023/12/11 20:00:14 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Write a program called alpha_mirror that takes a string and displays this string
+after replacing each alphabetical character by the opposite alphabetical
+character, followed by a newline.
+
+'a' becomes 'z', 'Z' becomes 'A'
+'d' becomes 'w', 'M' becomes 'N'
+
+and so on.
+
+Case is not changed.
+
+If the number of arguments is not 1, display only a newline.
+*/
 
 #include <unistd.h>
 
