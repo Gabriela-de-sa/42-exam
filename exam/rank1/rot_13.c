@@ -108,7 +108,7 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 1;
-	if (argc >= 2)
+	if (argc == 2)
 	{
 		while (argv[i])
 		{
