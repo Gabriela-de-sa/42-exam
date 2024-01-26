@@ -6,7 +6,7 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/07 19:50:54 by gabriela          #+#    #+#             */
-/*   Updated: 2023/12/11 20:00:14 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/01/26 12:54:21 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 1;
-	if (argc >= 2)
+	if (argc == 2)
 	{
 		while (argv[i])
 		{

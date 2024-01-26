@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 17:15:47 by gde-sa            #+#    #+#             */
-/*   Updated: 2023/12/12 18:06:53 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/01/26 14:05:33 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,30 +23,36 @@ int	ft_atoi(const char *str);
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	char	sign;
-	int		result;
+	int	i;
+	int	sign;
+	int	value;
 
 	i = 0;
 	sign = 1;
-	result = 0;
-	while (str[i] == ' ' || str[i] >= 9 && str[i] <= 13)
+	value = 0;
+	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' || str[i] == '\b')
 		i++;
 	if (str[i] == '-')
+	{
 		sign = -1;
-	if (str[i] == '-' || str[i] == '+')
+		i++;
+	}
+	if (str[i] == '+')
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + str[i] - '0';
+		value = value * 10 + (str[i] - '0');
 		i++;
 	}
-	return (result);
+	return (sign * value);
 }
 
+//#include <stdio.h>
 /*int	main(void)
 {
-	char	str[] = "		-42";
+	char	str[] = "		-55";
+	int		val;
 
-	ft_atoi(str);
+	val = ft_atoi(str);
+	printf("%i", val);
 }*/
