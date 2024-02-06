@@ -6,7 +6,7 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:04:19 by gabriela          #+#    #+#             */
-/*   Updated: 2024/01/26 15:55:11 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/05 22:02:55 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ ex: s = gabi123
 	reject = ""
 	retorno = 7
 */
+
+// lib somente para teste
 #include <string.h>
-#include <stdio.h>
 
 int	ft_strlen(const char *s)
 {
@@ -62,7 +63,10 @@ size_t	ft_strcspn(const char *s, const char *reject)
 	return (count);
 }
 
-/*int main(void)
+/*
+#include <string.h>
+#include <stdio.h>
+int main(void)
 {
 	char	str1[] = "gabi123";
 	char	str2[] = "";
