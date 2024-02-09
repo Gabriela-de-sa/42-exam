@@ -6,7 +6,7 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 20:34:43 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/05 21:54:49 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/06 21:15:36 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,6 @@ The function should be prototyped as follows:
 
 char	*ft_strpbrk(const char *s1, const char *s2);
 */
-
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
 
 char	*ft_strpbrk(const char *s1, const char *s2)
 {

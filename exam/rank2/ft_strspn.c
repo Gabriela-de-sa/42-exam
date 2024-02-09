@@ -6,9 +6,23 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 21:51:35 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/05 22:09:30 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/06 21:12:41 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Assignment name	: ft_strspn
+Expected files	: ft_strspn.c
+Allowed functions: None
+---------------------------------------------------------------
+
+Reproduce exactly the behavior of the strspn function 
+(man strspn).
+
+The function should be prototyped as follows:
+
+size_t	ft_strspn(const char *s, const char *accept);
+*/
 
 #include <unistd.h>
 
