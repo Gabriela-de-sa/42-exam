@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strcspn.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/26 15:04:19 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/05 22:02:55 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:06:13 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ size_t	ft_strcspn(const char *s, const char *reject)
 int main(void)
 {
 	char	str1[] = "gabi123";
-	char	str2[] = "";
+	char	str2[] = "1";
 
 	printf("%li\n", strcspn(str1, str2));
 	printf("%li", ft_strcspn(str1, str2));

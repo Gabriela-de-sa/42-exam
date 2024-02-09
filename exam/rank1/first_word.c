@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   first_word.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/23 17:35:32 by gabriela          #+#    #+#             */
-/*   Updated: 2023/12/07 18:49:31 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/09 10:35:33 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void	first_word(char **argv)
 
 int	main(int argc, char **argv)
 {
-	if (argc >= 2)
+	if (argc == 2)
 		first_word(argv);
 	write(1, "\n", 1);
 }

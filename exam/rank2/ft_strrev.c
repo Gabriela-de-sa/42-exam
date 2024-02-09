@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 21:19:58 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/05 21:50:55 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/09 11:12:27 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ char	*ft_strrev(char *str)
 
 	len = 0;
 	while (str[len])
-		len += 1;
+		len++;
 	len--;
 	i = 0;
 	while (len > i)

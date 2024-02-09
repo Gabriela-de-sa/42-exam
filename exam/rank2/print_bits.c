@@ -1,44 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   is_power_of_2.c                                    :+:      :+:    :+:   */
+/*   print_bits.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/06 22:05:15 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/09 11:46:09 by gde-sa           ###   ########.fr       */
+/*   Created: 2024/02/09 11:55:59 by gde-sa            #+#    #+#             */
+/*   Updated: 2024/02/09 12:12:15 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-Assignment name  : is_power_of_2
-Expected files   : is_power_of_2.c
-Allowed functions: None
+Assignment name  : print_bits
+Expected files   : print_bits.c
+Allowed functions: write
 --------------------------------------------------------------------------------
 
-Write a function that determines if a given number is a power of 2.
-
-This function returns 1 if the given number is a power of 2, otherwise it returns 0.
+Write a function that takes a byte, and prints it in binary WITHOUT A NEWLINE
+AT THE END.
 
 Your function must be declared as follows:
 
-int	    is_power_of_2(unsigned int n);
+void	print_bits(unsigned char octet);
+
+Example, if you pass 2 to print_bits, it will print "00000010"
 */
 
-int	is_power_of_2(unsigned int n)
+#include <unistd.h>
+
+void	print_bits(unsigned char octet)
 {
-	if (n == 0)
-		return (0);
-	while (n % 2 == 0)
-		n /= 2;
-	return ((n == 1) ? 1 : 0);
-}
+	unsigned char	bit;
+	unsigned int	i;
 
-#include <stdio.h>
-
-int	main(void)
-{
-	unsigned int	n;
-
-	printf("%i", is_power_of_2(2));
+	i = 8;
+	while (i--)
+	{
+		bit = ((octet >> i & 1));
+		write(1, &bit, 1);
+	}
 }

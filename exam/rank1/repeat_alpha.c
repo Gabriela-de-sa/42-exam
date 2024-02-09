@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   repeat_alpha.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:56:31 by gabriela          #+#    #+#             */
-/*   Updated: 2023/12/05 21:05:55 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/02/09 10:35:23 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ int	main(int argc, char **argv)
 {
 	int	i;
 
-	if (argc >= 2)
+	if (argc == 2)
 	{
 		i = 1;
 		while (argv[i])
