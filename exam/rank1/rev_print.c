@@ -33,12 +33,7 @@ $
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-int	ft_strlen(char *str)
+int	str_len(char *str)
 {
 	int	count;
 
@@ -48,33 +43,20 @@ int	ft_strlen(char *str)
 	return (count);
 }
 
-void	ft_reverse(char *argv)
-{
-	int	len_word;
-
-	len_word = ft_strlen(argv) - 1;
-	while (len_word >= 0)
-	{
-		ft_putchar(argv[len_word]);
-		len_word--;
-	}
-}
-
 int	main(int argc, char **argv)
 {
+	int	len;
 	int	i;
 
-	i = argc - 1;
-	if (argc >= 2)
+	if (argc == 2)
 	{
-		while (i > 0)
+		len = str_len(argv[1]);
+		len--;
+		while (len >= 0)
 		{
-			ft_reverse(argv[i]);
-			if (i < argc - 1)
-				ft_putchar(' ');
-			argc--;
-			i--;
+			write(1, &argv[1][len], 1);
+			len--;
 		}
 	}
-	ft_putchar('\n');
+	write(1, "\n", 1);
 }
