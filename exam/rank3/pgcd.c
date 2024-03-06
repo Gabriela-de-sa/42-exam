@@ -11,33 +11,30 @@
 /* ************************************************************************** */
 
 /*
-Write a program that takes a string and displays this string after rotating it
-one word to the left.
+Assignment name  : pgcd
+Expected files   : pgcd.c
+Allowed functions: printf, atoi, malloc, free
+--------------------------------------------------------------------------------
 
-Thus, the first word becomes the last, and others stay in the same order.
+Write a program that takes two strings representing two strictly positive
+integers that fit in an int.
 
-A "word" is defined as a part of a string delimited either by spaces/tabs, or
-by the start/end of the string.
+Display their highest common denominator followed by a newline (It's always a
+strictly positive integer).
 
-Words will be separated by only one space in the output.
+If the number of parameters is not 2, display a newline.
 
-If there's less than one argument, the program displays \n.
+Examples:
 
-Example:
-
-$>./rostring "abc   " | cat -e
-abc$
-$>
-$>./rostring "Que la      lumiere soit et la lumiere fut"
-la lumiere soit et la lumiere fut Que
-$>
-$>./rostring "     AkjhZ zLKIJz , 23y"
-zLKIJz , 23y AkjhZ
-$>
-$>./rostring "first" "2" "11000000"
-first
-$>
-$>./rostring | cat -e
+$> ./pgcd 42 10 | cat -e
+2$
+$> ./pgcd 42 12 | cat -e
+6$
+$> ./pgcd 14 77 | cat -e
+7$
+$> ./pgcd 17 3 | cat -e
+1$
+$> ./pgcd | cat -e
 $
 $>
 */
