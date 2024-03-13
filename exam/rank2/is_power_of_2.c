@@ -27,16 +27,16 @@ int	    is_power_of_2(unsigned int n);
 
 int	is_power_of_2(unsigned int n)
 {
-	unsigned int	r;
+	unsigned int	resto;
 
-	r = 1;
-	while (n > 1)
+	resto = 0;
+	while (n2 != 0)
 	{
-		if (r == n)
-			return (1);
-		n = n / 2;
+		resto = n1 % n2;
+		n2 = resto
+		n1 = n2;
 	}
-	return (0);
+	return (n1);
 }
 
 #include <stdio.h>
