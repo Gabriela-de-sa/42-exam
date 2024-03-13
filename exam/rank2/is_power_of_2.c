@@ -27,16 +27,11 @@ int	    is_power_of_2(unsigned int n);
 
 int	is_power_of_2(unsigned int n)
 {
-	unsigned int	resto;
-
-	resto = 0;
-	while (n2 != 0)
-	{
-		resto = n1 % n2;
-		n2 = resto
-		n1 = n2;
-	}
-	return (n1);
+	if (n == 0)
+		return (0);
+	while (n % 2 == 0)
+		n /= 2;
+	return ((n == 1) ? 1 : 0);
 }
 
 #include <stdio.h>
@@ -47,3 +42,4 @@ int	main(void)
 
 	printf("%i", is_power_of_2(2));
 }
+
