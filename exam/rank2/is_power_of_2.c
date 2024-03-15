@@ -6,7 +6,7 @@
 /*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 22:05:15 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/09 11:46:09 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/03/14 13:46:30 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,22 +23,25 @@ This function returns 1 if the given number is a power of 2, otherwise it return
 Your function must be declared as follows:
 
 int	    is_power_of_2(unsigned int n);
+ps: se n resultar em 1 significa sifnifica que ele é uma potencia de 2 
 */
 
-int	is_power_of_2(unsigned int n)
+int	    is_power_of_2(unsigned int n)
 {
 	if (n == 0)
 		return (0);
 	while (n % 2 == 0)
-		n /= 2;
-	return ((n == 1) ? 1 : 0);
+		n = n / 2;
+	if (n == 1)
+		return (1);
+	return (0);
 }
-
-#include <stdio.h>
 
 int	main(void)
 {
-	unsigned int	n;
+	int	n;
 
-	printf("%i", is_power_of_2(2));
+	n = 9;
+	printf("%i", is_power_of_2(n));
 }
+

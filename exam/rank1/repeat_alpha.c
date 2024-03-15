@@ -6,7 +6,7 @@
 /*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 14:56:31 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/09 10:35:23 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/03/14 12:20:58 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,61 +49,46 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-void	ft_putstr(char *str)
+void	lower(char str)
 {
-	int	j;
+	int	i;
 
-	j = 0;
-	while (str[j])
+	i = str - 97;
+	while (i >= 0)
 	{
-		ft_putchar(str[j]);
-		j++;
+		ft_putchar(str);
+		i--;
 	}
 }
 
-void	ft_repeat(char *argv)
+void	upper(char str)
 {
-	char	c;
-	int		i;
+	int	i;
 
-	i = 0;
-	while (argv[i])
+	i = str - 65;
+	while (i >= 0)
 	{
-		if (argv[i] >= '!' && argv[i] <= '@')
-			ft_putchar(argv[i]);
-		if (argv[i] >= 'a' && argv[i] <= 'z')
-			c = argv[i] - 97;
-		if (argv[i] >= 'A' && argv[i] <= 'Z')
-			c = argv[i] - 65;
-		while (c >= 0)
-		{
-			ft_putchar(argv[i]);
-			c--;
-		}
-		i++;
+		ft_putchar(str);
+		i--;
 	}
-}
-
-void	ft_word(char *argv)
-{
-	if (argv[0] >= 'a' && argv[0] <= 'z' || argv[0] >= 'A' && argv[0] <= 'Z')
-		ft_repeat(argv);
-	else
-		ft_putstr(argv);
 }
 
 int	main(int argc, char **argv)
 {
-	int	i;
+	int		i;
+	char	*str;
 
+	str = argv[1];
 	if (argc == 2)
 	{
-		i = 1;
-		while (argv[i])
+		while (str[i])
 		{
-			ft_word(argv[i]);
-			if (i < argc - 1)
-				ft_putchar(' ');
+			if (str[i] > 'a' && str[i] <= 'z')
+				lower(str[i]);
+			else if (str[i] > 'A' && str[i] <= 'Z')
+				upper(str[i]);
+			else
+				ft_putchar(str[i]);
 			i++;
 		}
 	}

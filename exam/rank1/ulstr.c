@@ -21,44 +21,30 @@ If the number of arguments is not 1, the program displays '\n'.
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ulstr(char *argv)
-{
-	int		i;
-	char	c;
-
-	i = 0;
-	while (argv[i])
-	{
-		c = argv[i];
-		if (argv[i] >= 'a' && argv[i] <= 'z')
-			ft_putchar(c - 32);
-		else if (argv[i] >= 'A' && argv[i] <= 'Z')
-			ft_putchar(c + 32);
-		else
-			ft_putchar(argv[i]);
-		i++;
-	}
-}
-
 int	main(int argc, char **argv)
 {
-	int	i;
+	int 	i;
+	char	c;
 
-	i = 1;
-	if (argc >= 2)
+	if (argc == 2)
 	{
-		while (argv[i])
+		i = 0;
+		while (argv[1][i])
 		{
-			ulstr(argv[i]);
-			if (i < argc - 1)
-				ft_putchar(' ');
+			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
+			{
+				c = argv[1][i] - 32;
+				write(1, &c, 1);
+			}
+			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
+			{
+				c = argv[1][i] + 32;
+				write(1, &c, 1);
+			}
+			else
+				write(1, &argv[1][i], 1);
 			i++;
 		}
 	}
-	ft_putchar('\n');
+	write(1, "\n", 1);
 }

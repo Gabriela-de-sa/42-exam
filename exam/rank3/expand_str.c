@@ -27,17 +27,4 @@ $
 $>
 */
 
-int	main(int argc, char **argv)
-{
-	int		i;
-	char	*str;
 
-	str = argv[1];
-	if (argv == 2)
-	{
-		i = 0;
-		while (str[i] == ' ' || str[i] == '\t')
-			i++;
-		
-	}
-}

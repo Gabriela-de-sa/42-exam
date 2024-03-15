@@ -6,7 +6,7 @@
 /*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/09 11:55:59 by gde-sa            #+#    #+#             */
-/*   Updated: 2024/02/09 12:12:15 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/03/14 15:45:12 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,15 @@ void	print_bits(unsigned char octet)
 	i = 8;
 	while (i--)
 	{
-		bit = ((octet >> i & 1));
+		bit = ((octet >> i & 1) + '0');
 		write(1, &bit, 1);
 	}
 }
+
+/*int	main(void)
+{
+	unsigned char	n;
+
+	n = 72;
+	print_bits(n);
+}*/
