@@ -16,15 +16,20 @@ size_t	ft_strspn(const char *s, const char *accept);
 #include <stdio.h>
 #include <unistd.h>
 
-void	print_bits(unsigned char octet)
+int	putnbr(int n)
 {
+	char	res;
 
+	if (n > 9)
+		n = putnbr(n / 10);
+	res = n % 10 + '0';
+	write(1, &res, 1);
 }
 
 int	main(void)
 {
-	unsigned char	n;
+	int	n;
 
-	n = 72;
-	print_bits(n);
+	n = 42;
+	putnbr(n);
 }

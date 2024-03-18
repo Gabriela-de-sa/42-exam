@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_power_of_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 22:05:15 by gabriela          #+#    #+#             */
-/*   Updated: 2024/03/14 13:46:30 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/03/16 13:31:03 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ This function returns 1 if the given number is a power of 2, otherwise it return
 Your function must be declared as follows:
 
 int	    is_power_of_2(unsigned int n);
-ps: se n resultar em 1 significa sifnifica que ele é uma potencia de 2 
+ps: se n resultar em 1 significa que ele é uma potencia de 2 
 */
 
 int	    is_power_of_2(unsigned int n)

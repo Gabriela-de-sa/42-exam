@@ -6,18 +6,40 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 19:44:20 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/27 20:23:42 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/03/16 13:33:33 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_itoa(int n)
+/*
+Assignment name  : paramsum
+Expected files   : paramsum.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that displays the number of arguments passed to it, followed by
+a newline.
+
+If there are no arguments, just display a 0 followed by a newline.
+
+Example:
+
+$>./paramsum 1 2 3 5 7 24
+6
+$>./paramsum 6 12 24 | cat -e
+3$
+$>./paramsum | cat -e
+0$
+$>
+*/
+
+void	putnbr(int n)
 {
 	char	digit;
 
 	if (n > 9)
-		ft_itoa(n / 10);
+		putnbr(n / 10);
 	digit = n % 10 + '0';
 	write(1, &digit, 1);
 }
@@ -34,7 +56,7 @@ int	main(int argc, char **argv)
 	else
 	{
 		count = argc - 1;
-		ft_itoa(count);
+		putnbr(count);
 	}
 	write(1, "\n", 1);
 }
