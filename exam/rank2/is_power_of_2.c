@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   is_power_of_2.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/06 22:05:15 by gabriela          #+#    #+#             */
-/*   Updated: 2024/03/16 13:31:03 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/03/18 12:15:53 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	    is_power_of_2(unsigned int n);
 ps: se n resultar em 1 significa que ele é uma potencia de 2 
 */
 
-int	    is_power_of_2(unsigned int n)
+int	is_power_of_2(unsigned int n)
 {
 	if (n == 0)
 		return (0);

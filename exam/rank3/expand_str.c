@@ -27,4 +27,48 @@ $
 $>
 */
 
+#include <unistd.h>
 
+int	ft_strlen(char *str)
+{
+	int	count;
+
+	count = 0;
+	while (str[count])
+		count++;
+	return (count);
+}
+
+int	main(int argc, char **argv)
+{
+	int	i;
+	int	len;
+
+	i = 0;
+	len = 0;
+	if (argc == 2)
+	{
+		while (argv[1][i] == ' ' || argv[1][i] == '\t' && argv[1][i])
+			i++;
+		len = ft_strlen(argv[1]);
+		len--;
+		while (argv[1][len] == ' ' || argv[1][len] == '\t' && len >= 0)
+			len--;
+		if (len >= 0)
+		{
+			while (i <= len)
+			{
+				if (argv[1][i] == ' ' || argv[1][i] == '\t')
+				{
+					while (argv[1][i] == ' ' || argv[1][i] == '\t' && i <= len)
+						i++;
+					write(1, "   ", 3);
+					continue ;
+				}
+				write(1, &argv[1][i], 1);
+				i++;
+			}
+		}
+	}
+	write(1, "\n", 1);
+}

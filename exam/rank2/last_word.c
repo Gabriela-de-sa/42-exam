@@ -3,12 +3,40 @@
 /*                                                        :::      ::::::::   */
 /*   last_word.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 19:42:17 by gabriela          #+#    #+#             */
-/*   Updated: 2024/03/05 20:28:29 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/03/18 12:21:16 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+Assignment name  : last_word
+Expected files   : last_word.c
+Allowed functions: write
+--------------------------------------------------------------------------------
+
+Write a program that takes a string and displays its last word followed by a \n.
+
+A word is a section of string delimited by spaces/tabs or by the start/end of
+the string.
+
+If the number of parameters is not 1, or there are no words, display a newline.
+
+Example:
+
+$> ./last_word "FOR PONY" | cat -e
+PONY$
+$> ./last_word "this        ...       is sparta, then again, maybe    not" | cat -e
+not$
+$> ./last_word "   " | cat -e
+$
+$> ./last_word "a" "b" | cat -e
+$
+$> ./last_word "  lorem,ipsum  " | cat -e
+lorem,ipsum$
+$>
+*/
 
 #include <unistd.h>
 

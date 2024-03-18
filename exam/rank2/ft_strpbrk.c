@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strpbrk.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
+/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 20:34:43 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/06 21:15:36 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/03/18 13:49:24 by gde-sa           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	*ft_strpbrk(const char *s1, const char *s2)
 		}
 		i++;
 	}
-	return ("(null)");
+	return ((void *)0);
 }
 
 /*
