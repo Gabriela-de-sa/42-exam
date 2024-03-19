@@ -3,20 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_list.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/18 13:54:22 by gde-sa            #+#    #+#             */
-/*   Updated: 2024/03/18 13:58:24 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/03/19 11:17:00 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifdef FT_LIST_H
-# define FT_LIST_H
+#define FT_LIST_H
 
-typedef struct    s_list
+typedef struct s_list
 {
-    struct s_list *next;
-    void          *data;
-}                 t_list;
+	struct s_list	*next;
+	void			*data;
+}	t_list;
 
-#endif

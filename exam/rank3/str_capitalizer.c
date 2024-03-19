@@ -6,7 +6,7 @@
 /*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/29 14:37:16 by gabriela          #+#    #+#             */
-/*   Updated: 2024/02/29 18:29:45 by gabriela         ###   ########.fr       */
+/*   Updated: 2024/03/19 11:21:50 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,69 +61,5 @@ void	lower(char str)
 
 int	main(int argc, char **argv)
 {
-	int		i;
-	int		j;
-	char	c;
 
-	if (argc > 1)
-	{
-		i = 1;
-		while (argv[i])
-		{
-			j = 0;
-			// tem mais de 1 argumento
-			while (argv[i][j])
-			{
-				// se for a primeira letra e depois for espaco ou tab entra
-				if (j == 0 && argv[i][0 + 1] == ' ' || argv[i][0 + 1] == '\t')
-				{
-					// se a letra estiver no intervalo entre a e z, se n somente escreve
-					if (argv[i][0] >= 'a' && argv[i][0] <= 'z')
-						upper(argv[i][0]);
-					else
-						write(1, &argv[i][0], 1);
-				}
-				// se for a primeira letra mas for uma palavra
-				else if (j == 0 && argv[i][0 + 1] != ' ' && argv[i][0 + 1] != '\t')
-				{
-					// se a letra estiver entre a e z, se nao somente escreve
-					if (argv[i][0] >= 'a' && argv[i][0] <= 'z')
-						upper(argv[i][0]);
-					else
-						write(1, &argv[i][0], 1);
-				}
-				else
-				{
-					// se antes for espaco ou tab e depois for diferente de tab ou espaco, 
-					// significa que é uma palavra
-					if (argv[i][j - 1] == ' ' || argv[i][j - 1] == '\t' && \
-						argv[i][j + 1] != ' ' && argv[i][j + 1] != '\t')
-					{
-						if (argv[i][j] >= 'a' && argv[i][j] <= 'z')
-							upper(argv[i][j]);
-						else
-							write(1, &argv[i][j], 1);
-					}
-					else
-					{
-						// o else é quando é depois da primeira letra na palavra e tenho que tratar
-						// se tiver maiuscula colocar em minuscula
-						if (argv[i][j - 1] != ' ' || argv[i][j - 1] != '\t')
-						{
-							if (argv[i][j] >= 'A' && argv[i][j] <= 'Z')
-								lower(argv[i][j]);
-							else
-								write(1, &argv[i][j], 1);
-						}
-					}
-				}
-				j++;
-			}
-			// no final de cada argumento colocar uma quebra de linha
-			write(1, "\n", 1);
-			i++;
-		}
-	}
-	else
-		write(1, "\n", 1);
 }
