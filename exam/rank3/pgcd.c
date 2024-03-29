@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   pgcd.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gde-sa <gde-sa@student.42.fr>              +#+  +:+       +#+        */
+/*   By: gabriela <gabriela@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/05 20:31:53 by gabriela          #+#    #+#             */
-/*   Updated: 2024/03/18 13:04:54 by gde-sa           ###   ########.fr       */
+/*   Updated: 2024/03/20 12:38:52 by gabriela         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int	main(int argc, char **argv)
 	int	n2;
 	int	resto;
 
+	resto = 0;
 	if (argc == 3)
 	{
 		n1 = atoi(argv[1]);
